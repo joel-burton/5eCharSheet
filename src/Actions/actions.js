@@ -1,0 +1,42 @@
+// Compile all of your actions here! 
+
+// BLOCK ACTIONS
+export const TOGGLE_BLOCK = 'TOGGLE_BLOCK';
+
+// FEATURE ACTIONS
+export const ADD_FEATURE    = 'ADD_FEATURE';
+export const DELETE_FEATURE = 'DELETE_FEATURE';
+export const EDIT_FEATURE   = 'EDIT_FEATURE';
+export const UPDATE_FEATURE = 'UPDATE_FEATURE';
+
+// MODAL ACTIONS
+export const HIDE_MODAL = 'HIDE_MODAL';
+export const SHOW_MODAL = 'SHOW_MODAL';
+
+// NOTES ACTIONS
+export const ADD_NOTE = 'ADD_NOTE';
+
+// STATS ACTIONS
+export const EDIT_STAT    = 'EDIT_STAT';
+export const UPDATE_STAT  = 'UPDATE_STAT';
+export const UPDATE_ARMOR = 'UPDATE_ARMOR';
+export const UPDATE_SPEED = 'UPDATE_SPEED';
+export const UPDATE_MELEE_ATTACK  = 'UPDATE_MELEE_ATTACK';
+export const UPDATE_SPELL_ATTACK  = 'UPDATE_SPELL_ATTACK';
+export const UPDATE_HIT_DIE_MAX   = 'UPDATE_HIT_DIE_MAX';
+export const UPDATE_HIT_DIE_COUNT = 'UPDATE_HIT_DIE_COUNT';
+
+// SPELL ACTIONS
+export const ADD_SPELL    = 'ADD_SPELL';
+export const DELETE_SPELL = 'DELETE_SPELL';
+export const EDIT_SPELL   = 'EDIT_SPELL';
+export const UPDATE_SPELL = 'UPDATE_SPELL';
+export const RESTORE_ALL_SLOTS    = 'RESTORE_ALL_SLOTS';
+export const UPDATE_MAX_SLOTS     = 'UPDATE_MAX_SLOTS';
+export const UPDATE_CURRENT_SLOTS = 'UPDATE_CURRENT_SLOTS';
+
+// WEAPON ACTIONS
+export const ADD_WEAPON    = 'ADD_WEAPON';
+export const DELETE_WEAPON = 'DELETE_WEAPON';
+export const EDIT_WEAPON   = 'EDIT_WEAPON';
+export const UPDATE_WEAPON = 'UPDATE_WEAPON';
