@@ -20,7 +20,7 @@ import ModalSpellConfig from './ModalSpellConfig';
 import ModalSpendSlot from './ModalSpendSlot';
 import * as modal from '../Actions/modals';
 import { 
-  hideModal, showModal, editStat,
+  hideModal, showModal, updateName, editStat,
   addFeature, deleteFeature, updateFeature,
   updateArmor, updateStat, updateSpeed,
   updateMeleeAttack, updateSpellAttack,
@@ -39,6 +39,9 @@ const ModalConductor = (props) => {
 
     case modal.TEST: 
       return <ModalTest {...props}/>;
+
+    case modal.MAIN_MENU:
+      return <ModalTest {...props} title={"Main Menu"}/>;
 
     case modal.ADD_FEATURE: 
       return <ModalEditor {...props} modalTitle={'Add Feature...'} showTitle={true} titleInputLabel={'Feature Title'} showDescription={true} showUses={true} onSubmit={props.addFeature} />;
@@ -60,6 +63,9 @@ const ModalConductor = (props) => {
         id={currentWeaponEditing.idCurrentlyEditing} titleInputLabel={'Weapon Title'} titleInput={currentWeaponEditing.title}
         damageInput={currentWeaponEditing.damage} damageTypeInput={currentWeaponEditing.damageType} propertiesInput={currentWeaponEditing.properties}
         rangeInput={currentWeaponEditing.range} descriptionInput={currentWeaponEditing.description} />  
+
+    case modal.EDIT_NAME:
+      return <ModalEditor {...props} modalTitle={'Character Name...'} showCharName={true} charNameInput={props.stats.name} onSubmit={props.updateName} />
 
     case modal.EDIT_STAT:
       return <ModalStatEditor {...props} onSubmit={props.updateStat} type={'stat'} />
@@ -135,6 +141,7 @@ const mapDispatchToProps = (dispatch) => {
 
     editStat: (id) => dispatch(editStat(id)),
 
+    updateName:       (name) => dispatch(updateName(name)),
     updateStat:  (payload) => dispatch(updateStat(payload)),
     updateArmor: (payload) => dispatch(updateArmor(payload)),
     updateSpeed: (payload) => dispatch(updateSpeed(payload)),

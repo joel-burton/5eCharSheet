@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { Text, View, TouchableOpacity } from "react-native";
 import { connect } from 'react-redux'; 
 
 import { editStat, showModal } from '../Actions';
@@ -28,8 +28,9 @@ const MainBlock = (props) => {
   let hitDie = stats['hitDie'];
 
   return <View id={"mainBlock"} style={[styles.container, styles.mainBlock]}>
-
-      <Text style={styles.characterName}>{stats.name}</Text>
+      <TouchableOpacity onPress={()=> showModal(modal.EDIT_NAME)} onLongPress={()=> showModal(modal.MAIN_MENU)}>
+        <Text style={styles.characterName}>{stats.name}</Text>
+      </TouchableOpacity>
 
       <Row style={{flex: 0, width: "71%", marginTop: 10, alignItems: "flex-end" }}>
         <Card label={init.title} onLongPress={()=> {editStat(init.id), showModal(modal.EDIT_INIT)}} score={(initCalc(stats) >=0 ? '+': '')+initCalc(stats)} />

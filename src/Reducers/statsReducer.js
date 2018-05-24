@@ -2,6 +2,7 @@ import initialState from "./initialState";
 import { 
   EDIT_STAT, 
   UPDATE_ARMOR, 
+  UPDATE_NAME,
   UPDATE_STAT, 
   UPDATE_SPEED, 
   UPDATE_HIT_DIE_COUNT, 
@@ -43,6 +44,17 @@ const statsReducer = (state = initialState.stats, action) => {
           extraModScore: extraModScore,
           abilityInput: abilityInput
         }
+      }
+
+    case UPDATE_NAME:
+      console.log("||||  UPDATE_NAME  ||||");
+      console.log(action);
+
+      let newName = payload.name;
+      if (newName == false) { newName = "Character Name" }
+      return {
+        ...state,
+        name: newName
       }
 
     case UPDATE_HIT_DIE_COUNT:

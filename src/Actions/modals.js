@@ -1,8 +1,10 @@
 export const TEST = 'TEST_MODAL';
+export const MAIN_MENU = 'MAIN_MENU_MODAL';
 
 export const ADD_FEATURE  = 'ADD_FEATURE_MODAL';
 export const EDIT_FEATURE = 'EDIT_FEATURE_MODAL';
 
+export const EDIT_NAME = 'EDIT_STAT_MODAL';
 export const EDIT_STAT = 'EDIT_STAT_MODAL';
 export const EDIT_PROF = 'EDIT_PROF_MODAL';
 export const EDIT_INIT = 'EDIT_INIT_MODAL';

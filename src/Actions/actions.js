@@ -19,6 +19,7 @@ export const ADD_NOTE = 'ADD_NOTE';
 // STATS ACTIONS
 export const EDIT_STAT    = 'EDIT_STAT';
 export const UPDATE_STAT  = 'UPDATE_STAT';
+export const UPDATE_NAME  = 'UPDATE_NAME';
 export const UPDATE_ARMOR = 'UPDATE_ARMOR';
 export const UPDATE_SPEED = 'UPDATE_SPEED';
 export const UPDATE_MELEE_ATTACK  = 'UPDATE_MELEE_ATTACK';

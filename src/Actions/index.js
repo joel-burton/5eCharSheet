@@ -86,6 +86,13 @@ export const addNote = (ID, TEXT) => {
 
 // STATS ACTION CREATORS
 
+export const updateName = (PAYLOAD) => {
+  return {
+    type: actions.UPDATE_NAME,
+    payload: PAYLOAD
+  }
+}
+
 export const editStat = (ID) => {
   return {
     type: actions.EDIT_STAT,
