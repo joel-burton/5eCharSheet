@@ -44,7 +44,6 @@ class ModalSpendSlot extends React.Component {
 
 
   render(props) {
-    console.log("|||  ModalSpendSlot props  |||", this.props);
     let { showModal, onSubmit } = this.props;
     let { spellLevel, currentSlots, maxSlots } = this.state;
     return <ModalWrapper {...this.props} title={"Update Spell Slots"} onSubmit={() => onSubmit({ spellLevel: spellLevel, currentSlots: currentSlots, maxSlots: maxSlots }) }>

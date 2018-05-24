@@ -19,7 +19,6 @@ const spellReducer = ( state = initialState.spells, action ) => {
     
     case ADD_SPELL:
       const newID = shortid.generate();
-      console.log('ADD_SPELL action:', action.payload)
       return {
         ...state,
         spellBook: {
@@ -58,7 +57,6 @@ const spellReducer = ( state = initialState.spells, action ) => {
 
 
     case EDIT_SPELL:
-      // console.log("EDIT_SPELL action.payload:", payload);
       return {
         ...state,
         currentSpellEditing: {
@@ -68,8 +66,6 @@ const spellReducer = ( state = initialState.spells, action ) => {
 
 
     case UPDATE_SPELL:
-      console.log("||||  UPDATE_SPELL payload  ||||");
-      console.log(payload);
       return {
         ...state,
         currentSpellEditing: {},

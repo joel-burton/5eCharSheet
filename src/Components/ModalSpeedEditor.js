@@ -20,7 +20,6 @@ class ModalSpeedEditor extends React.Component {
     super(props);
     let speed = this.props.stats.currentStatEditing;
     let current = speed.currentMode;
-    console.log("speed to set state:", speed);
     this.state = { 
       modalTitle: "Speed", 
       modes: { 0:'walk', 1:'swim', 2:'climb', 3:'fly' },
@@ -87,7 +86,6 @@ class ModalSpeedEditor extends React.Component {
     } = this.state;
     let { stats, onSubmit } = this.props;
 
-    console.log("state in render():", this.state);
     return (
       <ModalWrapper
         {...this.props} title={modalTitle} 

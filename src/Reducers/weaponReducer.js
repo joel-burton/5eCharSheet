@@ -24,8 +24,6 @@ const weaponReducer = (state = initialState.weapons, action) => {
       }
     
     case DELETE_WEAPON:
-      console.log("***** DELETE_WEAPON *****");
-      console.log(payload.id, "deleted");
       let newState = {...state};
       delete newState[payload.id];
       return newState;

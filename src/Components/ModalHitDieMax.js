@@ -57,8 +57,7 @@ class ModalHitDieEditor extends React.Component {
   render(props) {
     let { stat, pool, sizes, d6, d8, d10, d12, selectedIndex } = this.state;
     let { stats, onSubmit, title = "Hit Dice", } = this.props;
-    console.log('HitDieMax state:');
-    console.log(this.state);
+
     return <ModalWrapper {...this.props} title={title} onSubmit={() => 
       onSubmit({
         id: stat.id,

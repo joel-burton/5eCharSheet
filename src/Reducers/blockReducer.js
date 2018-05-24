@@ -2,10 +2,7 @@ import initialState from './initialState';
 import { TOGGLE_BLOCK } from '../Actions/actions';
 
 const blockReducer = (state = initialState.blocks, action) => {
-  // console.log('blockReducer action');
-  // console.log(action);
-  // console.log('blockReducer state');
-  // console.log(state);
+  
   switch (action.type) {
     case TOGGLE_BLOCK:
 

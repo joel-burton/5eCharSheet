@@ -21,8 +21,6 @@ const featureReducer = (state = initialState.features, action) => {
       }
     
     case DELETE_FEATURE:
-      console.log("***** DELETE_FEATURE *****");
-      console.log(payload.id, "deleted");
       let newState = {...state};
       delete newState[payload.id];
       return newState;

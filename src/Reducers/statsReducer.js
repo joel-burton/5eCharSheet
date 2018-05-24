@@ -47,9 +47,6 @@ const statsReducer = (state = initialState.stats, action) => {
       }
 
     case UPDATE_NAME:
-      console.log("||||  UPDATE_NAME  ||||");
-      console.log(action);
-
       let newName = payload.name;
       if (newName == false) { newName = "Character Name" }
       return {

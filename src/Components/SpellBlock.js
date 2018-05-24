@@ -29,7 +29,6 @@ class SpellBlock extends React.Component {
   }
 
   render(props) {
-    // console.log("|||||  SPELL BLOCK PROPS  |||||\n", "casterLevel: ", casterLevel, "\n", "props.spells: ", this.props.spells, "\n", );
     let { editSpell, showModal } = this.props;
     let { currentSlots, maxSlots} = this.props.spells;
     let casterLevel = this.props.stats.spellAttack.casterLevel;

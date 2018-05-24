@@ -15,7 +15,6 @@ class NoteCard extends React.Component {
   }
 
   changeText =(text) => {
-    console.log("changeText:", text);
     this.setState({
       text: text
     })   

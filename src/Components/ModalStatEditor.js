@@ -89,7 +89,6 @@ class ModalStatEditor extends React.Component {
     let abilities = this.state.abilities; 
     let key = abilities[value].id;
     let current = this.props.stats[key];
-    // console.log("setAbility current:", current);
     this.setState({
       stat: {
         ...this.state.stat,
@@ -116,7 +115,6 @@ class ModalStatEditor extends React.Component {
     let { stat, score, save, mod, saveProficient, profBonus, skills, jack, champ, proficiency, modalTitle, alert, extraMod, extraModAbility, extraModScore, abilities, abilityTitles, abilityInput } = this.state;
     let { stats, onSubmit, type='',  } = this.props;
 
-    // console.log("state in render():", this.state);
     return <ModalWrapper {...this.props} title={modalTitle} onSubmit={() => onSubmit({id: stats.currentStatEditing.id , score: score, save: save, mod: mod, proficient: saveProficient, skills: skills, jack: jack, champ: champ, alert: alert, extraMod: stat.extraMod, extraModAbility: stat.extraModAbility, extraModScore: stat.extraModScore, abilityInput: stat.abilityInput  })}>
       <View>
         <View style={{ alignItems: 'center', display: (type !== 'stat') ? 'flex' : 'none' }}>
